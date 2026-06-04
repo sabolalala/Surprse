@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DJIHANE ❤️</title>
+<style>
+body{margin:0;overflow:hidden;background:#000;height:100vh;font-family:Arial,sans-serif;}
+.msg,.photo{position:absolute;animation:float linear infinite;}
+.msg{
+color:#dffcff;font-size:28px;
+text-shadow:0 0 10px #9dfcff,0 0 20px #9dfcff,0 0 40px #9dfcff;
+white-space:nowrap;
+}
+.photo img{
+width:140px;height:140px;object-fit:cover;
+border-radius:20px;
+box-shadow:0 0 15px #fff,0 0 30px #ff7aa2;
+}
+.name{
+position:absolute;
+bottom:8px;left:50%;transform:translateX(-50%);
+color:white;font-weight:bold;
+text-shadow:0 0 10px #fff,0 0 20px #ff7aa2;
+}
+.heart{
+position:absolute;color:#ff4d6d;font-size:24px;
+text-shadow:0 0 10px #ff4d6d,0 0 20px #ff4d6d;
+animation:float linear infinite;
+}
+@keyframes float{
+from{transform:translateY(110vh);opacity:0;}
+15%{opacity:1;}
+85%{opacity:1;}
+to{transform:translateY(-130vh);opacity:0;}
+}
+</style>
+</head>
+<body>
+<script>
+function loveMsg(){
+ let e=document.createElement('div');
+ e.className='msg';
+ e.innerHTML='I love you bbe ♡';
+ e.style.left=Math.random()*90+'vw';
+ e.style.animationDuration=(8+Math.random()*8)+'s';
+ document.body.appendChild(e);
+ setTimeout(()=>e.remove(),17000);
+}
+
+function heart(){
+ let e=document.createElement('div');
+ e.className='heart';
+ e.innerHTML='❤';
+ e.style.left=Math.random()*95+'vw';
+ e.style.animationDuration=(6+Math.random()*8)+'s';
+ document.body.appendChild(e);
+ setTimeout(()=>e.remove(),15000);
+}
+
+function photo(){
+ let d=document.createElement('div');
+ d.className='photo';
+ d.style.left=Math.random()*80+'vw';
+ d.style.animationDuration=(10+Math.random()*8)+'s';
+ d.innerHTML=`<img src="DJIHANE.jpg"><div class="name">DJIHANE ❤️</div>`;
+ document.body.appendChild(d);
+ setTimeout(()=>d.remove(),19000);
+}
+
+setInterval(loveMsg,220);
+setInterval(heart,320);
+setInterval(photo,2500);
+</script>
+</body>
+</html>
